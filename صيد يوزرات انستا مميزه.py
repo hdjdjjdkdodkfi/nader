@@ -2,7 +2,7 @@ import os,sys,subprocess,webbrowser
 subprocess.getoutput("pip install mechanize")
 import requests,sys,os,time
 
-webbrowser.open('https://t.me/CC_LIVE_VISA')
+#webbrowser.open('https://t.me/CC_LIVE_VISA')
 import requests 
 import random 
 Z = '\033[1;31m' #احمر
@@ -27,7 +27,7 @@ W="\033[1;37m" # White
 E = "\033[0;90m" #رمادي
 #logo
 import pyfiglet
-ajaj = pyfiglet.figlet_format('ALAMIR')
+ajaj = pyfiglet.figlet_format('NADER')
 print(F+ajaj)
 print('welcome')
 #-------------------------logo ---------------------------#
@@ -70,13 +70,13 @@ def instaa(user):
         print(W+f" » {C} yas user» {F}{user} ")
         email+=1
         god=f"""[
-        امير جابلك يوزر انستا🥺😍
+        نادر جبلك يوزر انستا
        
 . ------------------------------------->
 [🧸] --->{user} 
 [✅] Special : Instagram
 .  ------------------------------------->
-[🧸] BY : @Y_B_D | @CC_LIVE_VISA"""
+[🧸] BY : @nader20090"""
         requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text={god}')
 def users():
     ran1="1234567890..qwertyuiopasdfghjklzxvcbnm.."
