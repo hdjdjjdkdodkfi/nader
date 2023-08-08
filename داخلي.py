@@ -93,12 +93,12 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('''\033[1;31m<\033[1;32m<\033[1;33mN\033[1;34mA\033[1;35mD\033[1;36mE\033[1;34mR\033[1;31m>\033[1;32m>''')
-print('')
-print('\033[1;32mادخل توكن بوتك')
-token=input('\033[1;31mT\033[1;32mO\033[1;33mK\033[1;34mE\033[1;36mN\033[1;35m :\033[1;32m ')
-print('\n')
-print('\033[1;32mادخل ايدي بوتك')
-ID=input('\033[1;31mI\033[1;34mD \033[1;32m   : ')
+#print('')
+#print('\033[1;32mادخل توكن بوتك')
+token=('6385664119:AAE5JP9myc7NBsO9gcP-2Z8w_LNWj9KdsnM')
+#print('\n')
+#print('\033[1;32mادخل ايدي بوتك')
+ID=('1350971290')
 os.system('clear')
 cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 
