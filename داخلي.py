@@ -1,3 +1,21 @@
+users = {
+    "NADER": "2006",
+    "NADE": "nn",
+    "NAD": "nnn",}
+    
+def login(username, password):
+    if username in users and users[username] == password:
+        print("تم تسجيل الدخول بنجاح!")
+    else:
+        print("\033[1;31mفشل في تسجيل الدخول.")
+        exit()
+
+username = ("NADER")
+
+password = input("\033[1;32mادخل كلمه سر الاداه\npassword : ")
+
+login(username, password)
+
 import webbrowser
 import requests,time,pyfiglet,datetime
 now = datetime.datetime.today()
@@ -14,7 +32,7 @@ t=(mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss)
 
 hours = (now.hour)
 x = datetime.datetime.now()
-g= datetime.datetime(2023, 7, 30, 12, 10 ,9)
+g= datetime.datetime(2023, 9, 30, 12, 10 ,9)
 
 
 if (x.strftime("%x"))>(g.strftime("%x")):
