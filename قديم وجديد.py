@@ -22,7 +22,7 @@ if (x.strftime("%x"))>(g.strftime("%x")):
  time.sleep(1)
  print('\033[1;31m المطور نادر @Q_B_h')
  time.sleep(1)
-print('\033[1;32m شروحات نادر')
+ print('\033[1;32m شروحات نادر')
  time.sleep(1)
  print('\033[1;31m 1')
  time.sleep(1)
