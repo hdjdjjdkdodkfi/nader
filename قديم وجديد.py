@@ -110,7 +110,7 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('\n')
-token=('6428563721:AAG4sOU4onVks2yjDK4z9O1PFEr3C3egPjM')
+token=('6385664119:AAGchr6pOj6D2hlqOZUlhvyUjtUwmW7hrO8')
 print('\n')
 ID=('1350971290')
 os.system('clear')
