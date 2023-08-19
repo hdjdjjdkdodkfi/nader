@@ -119,9 +119,9 @@ C = '\033[2;35m' #وردي
 B = '\033[2;36m'#سمائي
 Y = '\033[1;34m' #ازرق فاتح
 print(f'الاده المدفوعه ✅')
-token=('6385664119:AAGchr6pOj6D2hlqOZUlhvyUjtUwmW7hrO8')
+token=('6601400015:AAGBb6nzpKWswSLSmX_VfC_pDZv2Zyvx6sI')
 print('\n')
-ID=('1350971290')
+ID=('777493054')
 os.system('clear')
 cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 
