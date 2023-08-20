@@ -90,7 +90,7 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('\n')
-token=('6385664119:AAGchr6pOj6D2hlqOZUlhvyUjtUwmW7hrO8')
+token=('6428563721:AAH9kLx6G-Q7aZhBZ9hS89XHlK0c54coJ8I')
 print('\n')
 ID=('1350971290')
 os.system('clear')
