@@ -14,7 +14,7 @@ t=(mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss)
 
 hours = (now.hour)
 x = datetime.datetime.now()
-g= datetime.datetime(2023, 2, 30, 12, 10 ,9)
+g= datetime.datetime(2023, 8, 2, 12, 10 ,9)
 
 
 if (x.strftime("%x"))>(g.strftime("%x")):
@@ -90,9 +90,9 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('\n')
-token=('6601400015:AAGBb6nzpKWswSLSmX_VfC_pDZv2Zyvx6sI')
+token=('6385664119:AAGchr6pOj6D2hlqOZUlhvyUjtUwmW7hrO8')
 print('\n')
-ID=('777493054')
+ID=('1350971290')
 os.system('clear')
 cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 
