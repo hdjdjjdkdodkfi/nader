@@ -40,11 +40,14 @@ BASE_URL = "https://pal.beneficiaryregistration.cbt.wfp.org/api/v2/submission/re
 # =========================
 # أدوات مساعدة مطورة
 # =========================
+def clean_date_str(date_val):
+    if not date_val: return "غير محدد"
+    return str(date_val).split('T')[0]
+
 def calc_age(dob):
     if not dob: return "غير معروف"
     try:
-        # التعامل مع تواريخ مثل 2025-02-23T00:00:00+02:00
-        clean_date = str(dob).split('T')[0]
+        clean_date = clean_date_str(dob)
         d = datetime.strptime(clean_date, "%Y-%m-%d").date()
         today = date.today()
         y = today.year - d.year - ((today.month, today.day) < (d.month, d.day))
@@ -52,10 +55,10 @@ def calc_age(dob):
     except: return "خطأ في التاريخ"
 
 def yn(v):
-    if isinstance(v, dict): # التعامل مع بنية الإعاقة الجديدة في بياناتك
+    if isinstance(v, dict):
         v = v.get("true") or v.get("1")
     v_str = str(v).lower()
-    if v_str in ("true", "1", "yes", "none"): return "نعم" # في بياناتك true تعني نعم
+    if v_str in ("true", "1", "yes", "none"): return "نعم"
     if v_str in ("false", "0", "no"): return "لا"
     return "غير محدد"
 
@@ -76,15 +79,15 @@ def draw_box(title, content_list):
     return "\n".join(lines)
 
 # =========================
-# معالجة التقرير بناءً على بنية الـ JSON المرفقة
+# معالجة التقرير
 # =========================
 def build_report(d):
     report = []
 
-    # 1. معلومات الملف والنزوح (توسيع البيانات)
+    # 1. معلومات الملف والنزوح
     residence = [
         ("نوع الإقامة الحالي", translate_shelter(d.get('adminAccomodation', 'غير محدد'))),
-        ("تاريخ النزوح", str(d.get('dateofDisplacement', ''))[:10]),
+        ("تاريخ النزوح", clean_date_str(d.get('dateofDisplacement', ''))),
         ("عدد مرات النزوح", d.get('hhdisplacement', '0')),
         ("حالة اللجوء", d.get('refugeeStatus', 'No')),
         ("كود المنطقة (Admin4)", d.get('admin4', 'غير معروف')),
@@ -97,8 +100,8 @@ def build_report(d):
         ("الاسم الكامل", f"{d.get('hohfirstName','')} {d.get('hohlastName','')}"),
         ("اسم الأب والجد", f"{d.get('hohfathersName','')} {d.get('hohgrandfathersName','')}"),
         ("الجنس", "ذكر" if d.get('hohgender') == "M" else "أنثى"),
+        ("تاريخ الميلاد", clean_date_str(d.get('hohdob', ''))),
         ("العمر", f"{d.get('hohage','')} سنة"),
-        ("تاريخ الميلاد", d.get('hohdob', '')),
         ("رقم الهوية", d.get('documentNumber', '')),
         ("الحالة الاجتماعية", d.get('hohmaritalStatus', ''))
     ]
@@ -111,25 +114,25 @@ def build_report(d):
     ]
     report.append(draw_box("📞 ثالثاً: معلومات الاتصال", contacts))
 
-    # 4. أفراد الأسرة (معالجة تفصيلية)
+    # 4. أفراد الأسرة
     members = d.get("family_members_information", [])
     idx = 1
     for m in members:
-        # تحديد لون المربع حسب الحالة
         box_title = f"👪 عضو رقم ({idx})"
         if m.get("deleted"):
             box_title = "🗑️ عضو محذوف من الملف"
         
+        # إضافة تاريخ الميلاد هنا للأعضاء
         m_data = [
             ("الاسم", f"{m.get('hhmemberfirstName','')} {m.get('hhmemberlastName','')}"),
             ("اسم الأب", m.get('hhmemberfathersName','')),
             ("الصلة", "زوجة" if m.get('hhmemberrelation')=="2" else "ابن/ابنة"),
+            ("تاريخ الميلاد", clean_date_str(m.get('hhmemberdob', ''))),
             ("العمر", f"{m.get('hhmemberage','')} سنة"),
             ("الهوية", m.get('hhmemberdocumentNumber','')),
             ("إعاقة", yn(m.get('hhmemberpwd'))),
         ]
         
-        # إضافة بيانات الحمل والرضاعة للإناث فقط
         if m.get('hhmembergender') == "F":
             m_data.append(("حامل", yn(m.get('hhmemberpregnant'))))
             m_data.append(("مرضع", yn(m.get('hhmemberlactating'))))
